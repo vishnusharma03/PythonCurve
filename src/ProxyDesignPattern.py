@@ -1,11 +1,11 @@
 from abc import ABCMeta, abstractclassmethod
 
-# Intuition: The Proxy Design Pattern proviedes a pplaceholder for another object to control access to it.
-#       Thus provides more protection over access to that object
-
 
 class Iperson:
-
+    """
+    The Proxy Design Pattern proviedes a pplaceholder for another object to control access to it.
+    Thus provides more protection over access to that object.
+    """
     @abstractclassmethod
     def person_method(self):
         """Interface Method"""

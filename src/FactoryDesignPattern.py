@@ -2,15 +2,15 @@
 from abc import ABCMeta, abstractclassmethod
 
 
-# LearningScript:
-# The idea of Factory design pattern is to create objects without specifying the exact class
-# of which the object will be created
-#
-# This is decided at runtime
-#
-# Helps to decouple the creation of objects with their implementation
+
 
 class Iperson(metaclass=ABCMeta):
+    """
+    The idea of Factory design pattern is to create objects without specifying the exact class
+    of which the object will be created.
+    This is decided at runtime.
+    Helps to decouple the creation of objects with their implementation
+    """
 
     @abstractclassmethod
     def person_method(cls):
