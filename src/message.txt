@@ -1,0 +1,10 @@
+Hi there,
+
+I am learning Python Networking in which
+I am learning how to send an email via
+Python Script.
+
+This is a demo mail.
+
+Regards,
+Sharma
