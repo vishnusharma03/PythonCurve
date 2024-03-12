@@ -6,7 +6,7 @@ from email import encoders
 
 
 server = smtplib.SMTP('smtp.gmail.com', 587)
-# server.starttls()
+server.starttls()
 server.ehlo()
 
 with open('src/password.txt', 'r') as pw:
@@ -20,13 +20,13 @@ msg['From'] = "Nobody"
 msg['To'] = "You"
 msg['Subject'] = "First email via Python Script."
 
-with open('src/message.txt', 'r') as msg:
-    message = msg.read()
+with open('src/message.txt', 'r') as ms:
+    message = ms.read()
 
 
-msg.attach(MIMEText(message), 'plain')
+msg.attach(MIMEText(message))
 
-filename = "me.png"
+filename = "src/me.png"
 img = open(filename, 'rb')
 
 p = MIMEBase('application', 'octet-stream')
@@ -39,7 +39,7 @@ msg.attach(p)
 text = msg.as_string()
 
 server.sendmail('vishnusharma.kr7488@gmail.com', 'vishnusharmauss@gmail.com', text)
-print("Print Successful!")
+print("Send Successful!")
 
 
 
